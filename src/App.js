@@ -25,7 +25,7 @@ function Preview(props = {}) {
   React.useEffect(() => { 
     if (window.VKPreviewToken.isDev()) {
       setDev(true);
-    } 
+    }
   }, []);
 
   return (
