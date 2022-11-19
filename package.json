@@ -23,6 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
+  "author": {
+    "name": "MiroslavskyCoder",
+    "email": "programmer_js@vk.com"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
