@@ -11,12 +11,17 @@ function Preview(props = {}) {
   
   if (!window.VKPreviewToken) {
     return (
-      <Box>
+      <Box
+        sx={{
+          display: "grid"
+        }}
+      >
         
       </Box>
     );
   }
- 
+  
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => { 
     if (window.VKPreviewToken.isDev()) {
       setDev(true);
@@ -25,7 +30,6 @@ function Preview(props = {}) {
 
   return (
     <>
-
       {
         dev ? <DevView/> : <></>
       }
