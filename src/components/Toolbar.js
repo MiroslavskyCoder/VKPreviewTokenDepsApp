@@ -3,13 +3,8 @@ import {
   Typography,
   Toolbar,
   AppBar,
-  Stack,
-  Box,
-  IconButton
+  Stack
 } from "@mui/material"; 
-import {
-    HighlightOff 
-} from "@mui/icons-material";
 
 function byToolbar(props = {}) {
     return ( 
@@ -22,11 +17,22 @@ function byToolbar(props = {}) {
         > 
             <Toolbar>  
                 <Stack
-                    direction="row"
+                    direction="column"
                     alignItems="center"
-                    justifyContent="space-around"
+                    justifyContent="center"
+                    sx={{
+                        width: "100%"
+                    }}
                 >
-                    <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+                    <Typography
+                        variant="h6" 
+                        noWrap 
+                        component="div" 
+                        sx={{ 
+                            flexGrow: 1,
+                            userSelect: "none"
+                        }}
+                    >
                         VKPreviewToken
                     </Typography>
                 </Stack>
