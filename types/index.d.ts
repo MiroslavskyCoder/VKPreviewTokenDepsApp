@@ -1,24 +1,23 @@
-namespace VKPreviewToken { 
-    interface Session { 
-        token: string;
-    }
+namespace VKPreviewToken {  
     interface Versions { 
         node(): string;
         chrome(): string;
         electron(): string;
     }
-}
+} 
 
-interface VKPreviewToken {
-    listSavesSessions(options?: any): VKPreviewToken.Session[];
-    createSession(options: any): VKPreviewToken.Session;
-    isActiveSession(): boolean;
-
+interface VKPreviewToken { 
     versions: VKPreviewToken.Versions;
 
     exit(code?: number): void;
+    hide(): void;
+
+    parseArgs(): any; 
 
     isDev(): boolean;
+
+    require: NodeRequire;
+    process: NodeJS.Process;
 }
 
 interface Window {
