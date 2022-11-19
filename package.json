@@ -16,13 +16,13 @@
     "percentage": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
+  "homepage": "./",
   "author": {
     "name": "MiroslavskyCoder",
     "email": "programmer_js@vk.com"
@@ -59,6 +59,7 @@
     "postcss": "^8.4.19",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.3",
+    "react-scripts": "^5.0.1",
     "sass-loader": "^13.2.0",
     "serve": "^14.1.2",
     "style-loader": "^3.3.1",
