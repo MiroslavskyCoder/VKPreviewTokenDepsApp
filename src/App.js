@@ -1,24 +1,34 @@
 import React from "react";  
 import Toolbar from "./components/Toolbar";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Box, Typography } from "@mui/material";
+import DevView from "./components/DevView";
 import "./App.css";
 
-function Preview() {
+function Preview(props = {}) {
+  const [dev, setDev] = React.useState(false);
+  
   if (!window.VKPreviewToken) {
-    return <></>;
+    return (
+      <Box>
+        
+      </Box>
+    );
   }
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  React.useEffect(() => {
-    if (window.VKPreviewToken.isActiveSession()) {
-      
-    }
+ 
+  React.useEffect(() => { 
+    if (window.VKPreviewToken.isDev()) {
+      setDev(true);
+    } 
   }, []);
 
   return (
     <>
-      
+
+      {
+        dev ? <DevView/> : <></>
+      }
     </>
   )
 }
