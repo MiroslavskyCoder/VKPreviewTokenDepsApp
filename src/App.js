@@ -2,37 +2,30 @@ import React from "react";
 import Toolbar from "./components/Toolbar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Box, Typography } from "@mui/material";
-import DevView from "./components/DevView";
+import { Box, Typography } from "@mui/material"; 
 import "./App.css";
 
-function Preview(props = {}) {
-  const [dev, setDev] = React.useState(false);
+function Preview(props = {}) { 
   
-  if (!window.VKPreviewToken) {
+  if (!window.vkpt) {
     return (
       <Box
         sx={{
           display: "grid"
         }}
       >
-        
+        <Typography>
+          Это не VKPreviewToken
+        </Typography>
       </Box>
     );
-  }
-  
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  React.useEffect(() => { 
-    if (window.VKPreviewToken.isDev()) {
-      setDev(true);
-    }
-  }, []);
+  } 
 
   return (
-    <>
-      {
-        dev ? <DevView/> : <></>
-      }
+    <> 
+      <Typography>
+        хУЙ
+      </Typography>
     </>
   )
 }
